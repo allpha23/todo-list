@@ -1,9 +1,180 @@
-body {
-  background-color: rgb(0,0,0);
-  color: #bcbbbb;
+:root {
+  --body-lenear: linear-gradient(120deg, #E75590, #00C2CB);
 }
 
-#minha-lista {
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--body-lenear);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  font-family: sans-serif;
+}
+
+.todo-list header {
+  margin: 0;
+  padding: 14px 0;
+  color:  #e11c3e;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-top: 14px solid #e11c3e;
+  border-bottom: 1px solid #eeeeee;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px; 
+  background-color: #ffffff;
+}
+
+.input-field {
+  display: flex;
+  width: 100%;
+}
+
+.input-field input {
+  height: 45px;
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding-left: 8px;
+  border: unset;
+  border-bottom: 1px solid #eeeeee;
+  outline: none;
+}
+
+.input-field button {
+  height: 45px;
+  width: 20%;
+  background: linear-gradient(120deg, #E75590, #00C2CB, #E75590);
+  background-size: 200%;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  border: unset;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.input-field button:hover {
+  background-position: right;
+}
+
+#lista-tarefas {
+  margin: 0;
+  padding: 0;
+  height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+.lista {
+  height: 30px;
+  display: flex;
+  background-color: #fff;
+  border-bottom: 1px solid #eeeeee;
+  align-items: center;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.lista:hover {
+  transform: scale(1.05); 
+}
+
+.lista::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #cccccc;
+  border-radius: 30%;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+/* .lista::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #e11c3e;
+  transition: .3s ease-in-out;
+} */
+
+#selecionado {
+  background-color: #eeeeee;
+}
+
+.completed::before {
+  background-image: url("./checkIcon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button-field {
+  display: flex;
+  width: 100%;
+  padding-top:14px ;
+  justify-content: space-evenly;
+  background-color: #fff;
+  border-top: 1px solid #eeeeee;
+}
+
+.todo_button {
+  height: 45px;
+  width: 33%;
+  background: linear-gradient(120deg, #E75590, #00C2CB, #E75590);
+  background-size: 200%;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  border: unset;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.todo_button {
+  height: 45px;
+  width: 33%;
+  background: linear-gradient(120deg, #E75590, #00C2CB, #E75590);
+  background-size: 200%;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  border: unset;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.todo_button:hover {
+  background-position: right;
+}
+
+.todo_footer {
+  margin: 0;
+  padding: 5px;
+  border-bottom: 14px solid #e11c3e;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  background-color: #fff;
+}
+
+/* #minha-lista {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   margin-top: 24px;
@@ -31,26 +202,9 @@ body {
   color: #bcbbbb;
 }
 
-#apaga-tudo {
-  background-color: #617ae8;
-  border-radius: 10px;
-  width: 72px;
-  height: 58px;
-  font-size: 24px;
-  color: #bcbbbb;
-}
 
-#remover-finalizados {
-  margin-left: 12px;
-  margin-top: 24px;
-  background-color: #617ae8;
-  border: 0;
-  border-radius: 10px;
-  width: 305px;
-  height: 58px;
-  font-size: 24px;
-  color: #bcbbbb;
-}
+
+
 
 #lista-tarefas {
   margin-top: 130px;
@@ -62,15 +216,15 @@ body {
 
 #selecionado {
   width: 356px;
-  background-color: rgb(128,128,128);
+  background-color: rgb(128, 128, 128);
 }
 
 #funcionamento {
-  color: rgb(128,128,128);
+  color: rgb(128, 128, 128);
   margin-top: 43px;
   margin-bottom: 25px;
 }
 
 .completed {
-  text-decoration: line-through solid rgb(0,0,0);
-}
+  text-decoration: line-through solid rgb(0, 0, 0);
+} */
